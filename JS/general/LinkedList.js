@@ -2,7 +2,8 @@
  * 
  */
 
-var eol = "</br>";
+module.exports = LinkedList;
+var Node = require('./Node.js');
 
 function LinkedList() {
 	
@@ -26,5 +27,5 @@ function push(data) {
 
 function toString() {
 	
-	for(var cur = this.head; cur != null; cur = cur.link) document.writeln(cur.getData() + eol);
+	for(var cur = this.head; cur != null; cur = cur.link) console.log(cur.getData());
 }

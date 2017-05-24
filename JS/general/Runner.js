@@ -2,8 +2,9 @@
  * 
  */
 
-var eol = "</br>";
-document.write("Runner" + eol);
+var LinkedList = require('./LinkedList.js');
+
+console.log("Runner");
 
 var linkedList = new LinkedList();
 linkedList.push(1);
