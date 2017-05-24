@@ -8,11 +8,9 @@ var Node = require('./Node.js');
 function LinkedList() {
 	
 	this.head = null;
-	this.push = push;
-	this.toString = toString;
 }
 
-function push(data) {
+LinkedList.prototype.push = function push(data) {
 	
 	var temp = new Node();
 	temp.setData(data);
@@ -25,7 +23,9 @@ function push(data) {
 	}
 }
 
-function toString() {
+LinkedList.prototype.toString = function toString() {
 	
-	for(var cur = this.head; cur != null; cur = cur.link) console.log(cur.getData());
+	var list = new String();
+	for(var cur = this.head; cur != null; cur = cur.link) list = list + cur.getData() + ' ';
+	return list;
 }
